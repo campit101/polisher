@@ -1,0 +1,488 @@
+@import "tailwindcss";
+
+/* Dark is the default. [data-theme="light"] is set by the theme script or the Settings dialog. */
+:root {
+  --canvas: #121214;
+  --surface: #19191c;
+  --raised: #202024;
+  --line: rgb(255 255 255 / 0.08);
+  --line-strong: rgb(255 255 255 / 0.14);
+  --fg: #f4f4f5;
+  --fg-2: #b4b4bc;
+  --fg-3: #8e8e98;
+  /* The footer address: the dimmest shade that still meets 4.5:1 contrast (Cam, 16 Oct: less noticeable). */
+  --fine-print: #7d7d85;
+  --accent: #6352f5;
+  --accent-hover: #5848eb;
+  --accent-ink: #ffffff;
+  --accent-text: #a49bff;
+  --accent-soft: rgb(99 82 245 / 0.16);
+  --mark: #fb7185;
+  --mark-soft: rgb(251 113 133 / 0.13);
+  --good: #34d399;
+  --good-soft: rgb(52 211 153 / 0.12);
+  --shadow: 0 1px 0 rgb(255 255 255 / 0.04) inset, 0 24px 60px -20px rgb(0 0 0 / 0.6);
+  --glow: rgb(99 82 245 / 0.22);
+  color-scheme: dark;
+}
+
+[data-theme="light"] {
+  --canvas: #ffffff;
+  --surface: #f7f7f8;
+  --raised: #ffffff;
+  --line: #e7e7ea;
+  --line-strong: #d6d6db;
+  --fg: #18181b;
+  --fg-2: #52525b;
+  --fg-3: #6b6b75;
+  --fine-print: #757579;
+  --accent: #5b4fe9;
+  --accent-hover: #4c3fdc;
+  --accent-ink: #ffffff;
+  --accent-text: #4f43d9;
+  --accent-soft: rgb(91 79 233 / 0.09);
+  --mark: #e11d48;
+  --mark-soft: rgb(225 29 72 / 0.08);
+  --good: #047857;
+  --good-soft: rgb(5 150 105 / 0.08);
+  --shadow: 0 1px 2px rgb(16 16 24 / 0.04), 0 24px 60px -24px rgb(16 16 24 / 0.18);
+  --glow: rgb(91 79 233 / 0.12);
+  color-scheme: light;
+}
+
+@theme inline {
+  --color-canvas: var(--canvas);
+  --color-surface: var(--surface);
+  --color-raised: var(--raised);
+  --color-line: var(--line);
+  --color-line-strong: var(--line-strong);
+  --color-fg: var(--fg);
+  --color-fg-2: var(--fg-2);
+  --color-fg-3: var(--fg-3);
+  --color-accent: var(--accent);
+  --color-accent-hover: var(--accent-hover);
+  --color-accent-ink: var(--accent-ink);
+  --color-accent-text: var(--accent-text);
+  --color-accent-soft: var(--accent-soft);
+  --color-mark: var(--mark);
+  --color-mark-soft: var(--mark-soft);
+  --color-good: var(--good);
+  --color-good-soft: var(--good-soft);
+  --font-sans: var(--font-inter), ui-sans-serif, system-ui, sans-serif;
+  --font-serif: var(--font-serif4), ui-serif, Georgia, serif;
+}
+
+@layer base {
+  html {
+    scroll-behavior: smooth;
+    scroll-padding-top: 5rem;
+  }
+
+  body {
+    background: var(--canvas);
+    color: var(--fg);
+    font-family: var(--font-sans);
+    font-size: 1rem;
+    line-height: 1.6;
+    font-feature-settings: "cv11", "ss01";
+  }
+
+  a {
+    color: var(--accent-text);
+    text-decoration: underline;
+    text-underline-offset: 0.2em;
+    text-decoration-thickness: 1px;
+  }
+
+  :focus-visible {
+    outline: 2px solid var(--accent-text);
+    outline-offset: 2px;
+    border-radius: 6px;
+  }
+
+  ::selection {
+    background: var(--accent-soft);
+  }
+}
+
+/* Components sit below utilities, so utility classes can adjust them. */
+@layer components {
+  /* Display type: large, tight, quiet. */
+  .headline {
+    font-size: clamp(2.75rem, 7vw, 5.25rem);
+    line-height: 1.02;
+    font-weight: 650;
+    letter-spacing: -0.045em;
+    text-wrap: balance;
+  }
+  .title {
+    font-size: clamp(1.875rem, 3.6vw, 2.75rem);
+    line-height: 1.08;
+    font-weight: 650;
+    letter-spacing: -0.035em;
+    text-wrap: balance;
+  }
+
+  /* Buttons and links that look like buttons. */
+  .btn {
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+    gap: 0.5rem;
+    min-height: 2.75rem;
+    padding: 0 1.25rem;
+    border-radius: 999px;
+    font-weight: 600;
+    font-size: 0.9375rem;
+    text-decoration: none;
+    white-space: nowrap;
+    transition: background-color 150ms ease, border-color 150ms ease, color 150ms ease, transform 120ms ease;
+  }
+  /* A small press, so every button answers a click (Cam, 16 Oct). */
+  .btn:active:not(:disabled) {
+    transform: scale(0.96);
+  }
+  .btn-primary {
+    background: var(--accent);
+    color: var(--accent-ink);
+  }
+  .btn-primary:hover {
+    background: var(--accent-hover);
+  }
+  .btn:disabled {
+    opacity: 0.45;
+    cursor: not-allowed;
+  }
+  .btn-primary:disabled:hover {
+    background: var(--accent);
+  }
+  .btn-quiet {
+    color: var(--fg);
+    border: 1px solid var(--line-strong);
+  }
+  .btn-quiet:hover {
+    background: var(--surface);
+  }
+  .btn-sm {
+    min-height: 2.25rem;
+    padding: 0 0.95rem;
+    font-size: 0.875rem;
+  }
+
+  .visually-hidden {
+    position: absolute !important;
+    width: 1px;
+    height: 1px;
+    overflow: hidden;
+    clip: rect(0 0 0 0);
+    white-space: nowrap;
+  }
+
+  /* The AI tells in the demo: struck through in rose. */
+  .tell {
+    color: var(--fg-3);
+    text-decoration: line-through;
+    text-decoration-color: var(--mark);
+    text-decoration-thickness: 2px;
+    background-color: var(--mark-soft);
+    border-radius: 4px;
+    padding-inline: 1px;
+    box-decoration-break: clone;
+    -webkit-box-decoration-break: clone;
+  }
+}
+
+/* Signature move: the tells are struck one by one as the demo window scrolls into view. */
+.demo {
+  view-timeline-name: --demo;
+}
+@keyframes strike {
+  from {
+    color: var(--fg);
+    text-decoration-color: transparent;
+    background-color: transparent;
+  }
+}
+@supports (animation-timeline: view()) {
+  @media (prefers-reduced-motion: no-preference) {
+    :root:not([data-motion="reduced"]) .demo .tell {
+      animation: strike linear both;
+      animation-timeline: --demo;
+      animation-range: cover calc(14% + var(--i) * 3.2%) cover calc(17% + var(--i) * 3.2%);
+    }
+  }
+}
+
+/* Smooth scrolling and transitions respect both the device setting and the site setting. */
+@media (prefers-reduced-motion: reduce) {
+  html {
+    scroll-behavior: auto;
+  }
+}
+[data-motion="reduced"] {
+  scroll-behavior: auto;
+}
+[data-motion="reduced"] *,
+[data-motion="reduced"] *::before,
+[data-motion="reduced"] *::after {
+  transition: none !important;
+  animation: none !important;
+}
+
+/* Settings dialog */
+dialog.settings::backdrop {
+  background: rgb(0 0 0 / 0.55);
+  backdrop-filter: blur(2px);
+}
+dialog.settings[open] {
+  animation: dialog-in 160ms ease-out;
+}
+@keyframes dialog-in {
+  from {
+    opacity: 0;
+    transform: translateY(6px) scale(0.99);
+  }
+}
+@media (prefers-reduced-motion: reduce) {
+  dialog.settings[open] {
+    animation: none;
+  }
+}
+
+/* The "You're subscribed" notice slides in, then fades out after 5 seconds (subscribed-notice.tsx). */
+.notice-in {
+  animation: dialog-in 300ms ease-out;
+}
+@media (prefers-reduced-motion: reduce) {
+  .notice-in {
+    animation: none;
+    transition: none;
+  }
+}
+
+@layer components {
+  /* Segmented controls built from real radio buttons. */
+  .segmented {
+    display: inline-flex;
+    padding: 3px;
+    gap: 2px;
+    border-radius: 10px;
+    background: var(--canvas);
+    border: 1px solid var(--line);
+  }
+  .segmented label {
+    position: relative;
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+    gap: 0.4rem;
+    min-width: 2.25rem;
+    height: 2rem;
+    padding: 0 0.6rem;
+    border-radius: 7px;
+    color: var(--fg-2);
+    font-size: 0.875rem;
+    cursor: pointer;
+  }
+  .segmented input {
+    position: absolute;
+    inset: 0;
+    opacity: 0;
+    cursor: pointer;
+  }
+  .segmented label:has(input:checked) {
+    background: var(--raised);
+    color: var(--fg);
+    box-shadow: 0 0 0 1px var(--line-strong);
+  }
+  .segmented label:has(input:focus-visible) {
+    outline: 2px solid var(--accent-text);
+    outline-offset: 1px;
+  }
+  .segmented label {
+    transition: background-color 150ms ease, color 150ms ease, transform 120ms ease;
+  }
+  .segmented label:active {
+    transform: scale(0.96);
+  }
+  /* A choice that needs signing in first (Cam, 16 Oct): looks like the others, muted, with a lock. */
+  .segmented .segmented-locked {
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+    gap: 0.4rem;
+    height: 2rem;
+    padding: 0 0.6rem;
+    border-radius: 7px;
+    color: var(--fg-3);
+    font-size: 0.875rem;
+    cursor: pointer;
+    transition: color 150ms ease, transform 120ms ease;
+  }
+  .segmented .segmented-locked:hover {
+    color: var(--fg-2);
+  }
+  .segmented .segmented-locked:active {
+    transform: scale(0.96);
+  }
+
+  /* A small round badge in a choice's top-right corner: * for required, a tick when done. */
+  .corner {
+    position: absolute;
+    top: -0.45rem;
+    right: -0.45rem;
+    z-index: 2;
+    display: inline-flex;
+  }
+  .corner-badge {
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+    width: 1rem;
+    height: 1rem;
+    border-radius: 999px;
+    border: 1px solid var(--line-strong);
+    background: var(--surface);
+    color: var(--fg-2);
+    font-size: 0.625rem;
+    font-weight: 600;
+    line-height: 1;
+  }
+  /* A bare red asterisk, a touch larger, with no ring (Cam, 16 Oct). */
+  .corner-badge-required {
+    border: none;
+    background: transparent;
+    color: var(--mark);
+    font-size: 1.125rem;
+    /* An asterisk sits high in its line, so it is lowered to sit beside the label. */
+    transform: translateY(0.2rem);
+  }
+  .corner-badge-done {
+    border-color: var(--good);
+    color: var(--good);
+  }
+
+  /* FAQ disclosure */
+  .faq summary {
+    list-style: none;
+    cursor: pointer;
+  }
+  .faq summary::-webkit-details-marker {
+    display: none;
+  }
+  .faq summary .plus {
+    transition: transform 180ms ease;
+  }
+  .faq details[open] summary .plus {
+    transform: rotate(45deg);
+  }
+}
+
+/* Violet haze behind the front page's hero (Cam, 17 Oct; violet-haze.tsx). The host is a full-width
+   wrapper around the hero, below the header; the layer sits behind the content (z-index -1 inside
+   the host's own stacking context) and clips itself. The bottom fades out so the haze never ends on
+   a hard line. Dark theme only; the site's Reduced motion setting stops it through the
+   [data-motion="reduced"] rule above, the device setting through the media query below. */
+@layer components {
+  .polisher-violet-haze-host {
+    --polisher-haze-intensity: 0.72;
+    --polisher-haze-speed: 1;
+    position: relative;
+    isolation: isolate;
+  }
+  .polisher-violet-haze {
+    position: absolute;
+    z-index: -1;
+    inset: 0;
+    overflow: hidden;
+    pointer-events: none;
+    contain: paint;
+    opacity: var(--polisher-haze-intensity);
+    transition: opacity 1.4s ease;
+    mask-image: linear-gradient(to bottom, #000 72%, transparent);
+  }
+  .polisher-violet-haze-host:has(textarea:focus) .polisher-violet-haze {
+    opacity: calc(var(--polisher-haze-intensity) * 0.4);
+  }
+  .polisher-violet-haze > span {
+    display: block;
+    position: absolute;
+  }
+  .polisher-violet-haze__a {
+    width: 118%;
+    height: 109%;
+    left: -48%;
+    top: -5%;
+    background: radial-gradient(ellipse at 48% 47%, #6352f54a 0%, #6352f51e 25%, #6352f509 47%, transparent 67%);
+    animation: polisher-violet-drift-a calc(16s / var(--polisher-haze-speed)) ease-in-out -5s infinite alternate;
+    will-change: transform;
+  }
+  .polisher-violet-haze__b {
+    width: 90%;
+    height: 100%;
+    right: -33%;
+    top: 25%;
+    background: radial-gradient(ellipse at 50% 45%, #9b70ed30, #6352f514 31%, transparent 66%);
+    animation: polisher-violet-drift-b calc(21s / var(--polisher-haze-speed)) ease-in-out -9s infinite alternate;
+    will-change: transform;
+  }
+  .polisher-violet-haze__c {
+    width: 105%;
+    height: 56%;
+    left: -18%;
+    bottom: -24%;
+    background: radial-gradient(ellipse, #8272f524, #6352f50a 40%, transparent 69%);
+    animation: polisher-violet-drift-c calc(14s / var(--polisher-haze-speed)) ease-in-out -7s infinite alternate;
+  }
+  .polisher-violet-haze[data-paused="true"] > span {
+    animation-play-state: paused;
+  }
+  @media (max-width: 620px) {
+    .polisher-violet-haze__a {
+      width: 165%;
+      height: 65%;
+      left: -59%;
+      top: -4%;
+    }
+    .polisher-violet-haze__b {
+      top: 3%;
+      height: 64%;
+    }
+  }
+  [data-theme="light"] .polisher-violet-haze {
+    display: none;
+  }
+  @media (prefers-reduced-motion: reduce) {
+    .polisher-violet-haze > span {
+      animation: none !important;
+      will-change: auto;
+    }
+    .polisher-violet-haze {
+      transition: none;
+    }
+  }
+}
+@keyframes polisher-violet-drift-a {
+  from {
+    transform: translate3d(-10%, -8%, 0) scale(0.98);
+  }
+  to {
+    transform: translate3d(30%, 20%, 0) scale(1.18);
+  }
+}
+@keyframes polisher-violet-drift-b {
+  from {
+    transform: translate3d(4%, 14%, 0) scale(1.03);
+  }
+  to {
+    transform: translate3d(-38%, -18%, 0) scale(1.14);
+  }
+}
+@keyframes polisher-violet-drift-c {
+  from {
+    transform: translate3d(-10%, 14%, 0) scale(0.9);
+  }
+  to {
+    transform: translate3d(26%, -30%, 0) scale(1.2);
+  }
+}

@@ -1,0 +1,52 @@
+# dependencies
+node_modules/
+.pnp
+.pnp.*
+
+# builds
+.next/
+.next-verify/
+.next-e2e/
+.next-lh/
+.lighthouse/
+out/
+build/
+dist/
+*.tsbuildinfo
+next-env.d.ts
+
+# tests
+coverage/
+playwright-report/
+test-results/
+blob-report/
+.lighthouseci/
+playwright/.cache/
+
+# env and secrets
+.env
+.env.local
+.env.*.local
+.env.production
+*.pem
+
+# tooling
+.vercel/
+.supabase/
+supabase/.temp/
+.codex/hooks/.last-green
+.DS_Store
+Thumbs.db
+npm-debug.log*
+
+.env*
+!.env.example
+
+# Output of npm run measure:costs when no path is given
+measure-costs.txt
+
+# Local AI-checker tools for evaluation only (Python venv, models): never committed or uploaded
+.eval-tools/
+
+# Local video work, including a key file: never commit (21 Oct).
+/videos/

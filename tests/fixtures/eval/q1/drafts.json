@@ -1,0 +1,82 @@
+[
+  {
+    "id": "c1-football",
+    "tag": "casual",
+    "text": "Hey Jamie! I hope you're doing well. I just wanted to let you know that, unfortunately, I won't be able to make it to football on Thursday — something came up at work and I've been asked to cover a late shift. I'm really sorry for the short notice! Would Saturday work instead? I saw that the 5-a-side pitches at the sports centre are free at 7pm, and it's only £6 each. Let me know what you think, and I'll go ahead and book it. Looking forward to it!"
+  },
+  {
+    "id": "c2-edinburgh",
+    "tag": "casual",
+    "text": "Hi everyone! 🎉 I've been looking into our Edinburgh trip and I think I've found a great option. There's a train that leaves Aberdeen at 08:12 and gets in just after 10:30, which would give us the whole day to explore. Return tickets are £24.60 each with a railcard, which is honestly a fantastic deal. The website says tickets are \"non-refundable after purchase\", so we'd need to be certain before booking. Here's the link: https://www.scotrail.co.uk. Let me know by Wednesday if you're in, and I'll organize everything. It's going to be an amazing day!"
+  },
+  {
+    "id": "c3-mum",
+    "tag": "casual",
+    "text": "Hi Mum, I hope you and Dad are both keeping well! I just wanted to give you a quick update on how things are going. This week has been quite busy — I've had two exams, a group presentation, and a few extra shifts at work. The good news is that I think the exams went really well, and the presentation was a success. I'm planning to come home on the 22nd, probably on the afternoon bus, so I should be back around 6pm. Is there anything you'd like me to bring? Love you both, and I can't wait to see you soon!"
+  },
+  {
+    "id": "c4-bills",
+    "tag": "casual",
+    "text": "Hey guys, quick one about the bills for this month. I've gone through everything and here's the breakdown: the electricity came to £84.30 and the wifi was £27, which brings the total to £111.30. Split three ways, that works out at £37.10 each. If you could send your share to me by Friday, that would be really helpful, as the direct debit comes out on Monday. Additionally, I noticed the electricity is noticeably higher than last month, so it might be worth being a bit more mindful about leaving the heating on. Thanks so much, I really appreciate it!"
+  },
+  {
+    "id": "c5-game-night",
+    "tag": "casual",
+    "text": "Yo! Have you seen that the new co-op game finally dropped? I've been looking forward to it for months, and the reviews are saying it's one of the best of the year. I was thinking we could jump on together on Friday night, maybe around 9pm? I'll set up a Discord call so we can all chat while we play. It's £19.99 on Steam right now, but it's supposed to go on sale next week, so it might be worth waiting if you're not in a rush. Either way, it should be a great night. Let me know if you're up for it!"
+  },
+  {
+    "id": "c6-shift-swap",
+    "tag": "casual",
+    "text": "Hi Sophie, I hope you're having a good week! I was wondering if you'd be able to do me a huge favour. I'm currently down to work on Sunday from 10:00 to 16:00, but I've got a family event that I really can't miss. Would you be open to swapping your Tuesday shift for my Sunday one? I completely understand if it doesn't work for you, so no pressure at all. If you're able to help, I'll let the manager know and update the rota myself. Thanks so much in advance — I really appreciate it!"
+  },
+  {
+    "id": "c7-birthday",
+    "tag": "casual",
+    "text": "Happy 18th birthday, Ellie! 🎂 I can't believe how quickly time has flown — it feels like just yesterday you were begging me to play video games with you. You've grown into such a kind, funny, and hard-working person, and I'm genuinely so proud of you. I hope today is filled with laughter, good food, and all the people who matter most to you. Enjoy every moment of it, because you truly deserve it. Let's grab a celebratory pizza when I'm back next month — my treat! Have the best day ever!"
+  },
+  {
+    "id": "c8-thanks-loan",
+    "tag": "casual",
+    "text": "Hey Ross, I just wanted to say a massive thank you for lending me your camera last weekend. It made such a difference, and the photos from the hike came out absolutely stunning. I've cleaned it, charged both batteries, and put it back in the case, so it's ready to go whenever you want it back. I can drop it round on Thursday evening if that works for you, or I can bring it to the pub on Saturday. Honestly, I really owe you one — the next round is definitely on me!"
+  },
+  {
+    "id": "f1-tutor-meeting",
+    "tag": "formal",
+    "text": "Dear Ms Grant,\n\nI hope this email finds you well. I am writing to ask whether it would be possible to arrange a short meeting to discuss my module choices for next term. I am particularly interested in the databases and web development options, but I would value your advice on which combination would best prepare me for further study.\n\nI am available on Tuesday and Thursday afternoons after 2pm, and I would be happy to meet in person or over Teams, whichever is more convenient for you. The meeting should not take more than 20 minutes.\n\nThank you very much for your time and support. I look forward to hearing from you.\n\nKind regards,\nAlex"
+  },
+  {
+    "id": "f2-holiday-request",
+    "tag": "formal",
+    "text": "Hi Mark,\n\nI hope you're having a good week. I wanted to reach out to formally request annual leave from Monday 3 November to Friday 7 November. I have checked the rota, and I believe there should be enough cover during that week, as two new team members have recently completed their training.\n\nI would be more than happy to work additional hours in the weeks before or after to help ensure everything runs smoothly. Additionally, I will make sure any outstanding tasks are completed before I leave.\n\nPlease let me know if this works, or if you would like to discuss it further. Thank you for considering my request.\n\nBest regards,\nAlex"
+  },
+  {
+    "id": "f3-boiler",
+    "tag": "formal",
+    "text": "Dear Letting Team,\n\nI am writing to follow up on the boiler issue at Flat 2, 18 Union Grove, which I first reported on 12 October (reference number LT-55210). Unfortunately, the problem has still not been resolved, and we have now been without reliable heating or hot water for over a week.\n\nThe engineer who visited on Thursday said \"it needs a new part and it should be ordered today\", but we have not received any further updates since then. As temperatures are dropping, this is becoming increasingly difficult for everyone in the flat.\n\nCould you please confirm when the part is expected to arrive and when the repair will be completed? I would greatly appreciate a prompt response.\n\nKind regards,\nAlex"
+  },
+  {
+    "id": "f4-project-post",
+    "tag": "formal",
+    "text": "I'm excited to share that I've just finished my latest coding project — a budgeting app that helps students track their spending and set realistic weekly goals! 🚀\n\nOver the past six weeks, I've learned so much about building full-stack applications, from designing a clean user interface to setting up a secure database and deploying everything to the cloud. It wasn't always easy, but overcoming each challenge has made me a more confident and resilient developer.\n\nThe app currently has 42 users, and the feedback so far has been incredibly positive. You can check it out here: https://example.com/budget-app\n\nI'd love to hear your thoughts, and I'm always open to connecting with fellow developers. #coding #students #webdevelopment"
+  },
+  {
+    "id": "f5-damaged-order",
+    "tag": "formal",
+    "text": "Dear Customer Service Team,\n\nI am writing regarding my recent order, number 48213, which was delivered on 9 October. Unfortunately, when I opened the parcel, I discovered that the headphones were damaged, with a visible crack along the left ear cup.\n\nYour website states that items \"arrive within 3 to 5 working days in perfect condition\", so I was very disappointed to receive a faulty product. I have attached photos of the damage and the packaging for your reference.\n\nI would like to request a full refund of £34.99 to my original payment method, rather than a replacement. Could you please let me know how to return the item?\n\nThank you for your assistance. I look forward to your response.\n\nKind regards,\nAlex"
+  },
+  {
+    "id": "f6-volunteer",
+    "tag": "formal",
+    "text": "Dear Sir or Madam,\n\nI hope this message finds you well. I recently came across your organisation's work supporting local food banks, and I would love to get involved as a volunteer. I am a student in Aberdeen with a part-time job, so I would be available for around four hours a week, ideally on weekends.\n\nI have previous experience in customer service, and I am confident in my ability to communicate clearly, work well as part of a team, and stay organised under pressure. I am passionate about giving back to my community and making a meaningful difference.\n\nPlease let me know if there are any current opportunities, or if there is an application form I should complete. Thank you for your time.\n\nBest wishes,\nAlex"
+  },
+  {
+    "id": "f7-devlog",
+    "tag": "formal",
+    "text": "Devlog #7: Big Progress This Month! 🎮\n\nHey everyone, welcome back to another devlog! This month has been incredibly productive, and I'm thrilled to share what I've been working on.\n\nFirst, I've completely reworked the inventory system, making it faster, cleaner, and much more intuitive to use. Second, I've added 12 new enemy types, each with unique behaviours and attack patterns. Finally, I've fixed over 30 bugs reported by our amazing playtesters.\n\nThe game is now roughly 70% complete, and I'm aiming to open the Steam wishlist page by the end of November. Your support truly means the world to me, and I couldn't do this without this incredible community.\n\nStay tuned for more updates soon!"
+  },
+  {
+    "id": "f8-gym-cancel",
+    "tag": "formal",
+    "text": "Dear Membership Team,\n\nI am writing to formally request the cancellation of my gym membership, membership number GM-209184. Due to changes in my work schedule, I am no longer able to attend regularly, and I feel it would be best to end my membership at this time.\n\nI understand that your terms require 30 days' notice, so I would be grateful if you could confirm that my final payment will be taken on 1 November and that no further payments will be collected after that date.\n\nThank you for providing such a welcoming environment over the past year. I have genuinely enjoyed being a member.\n\nKind regards,\nAlex"
+  }
+]
