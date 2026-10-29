@@ -1,0 +1,6 @@
+# Keep plain LF line endings on every checkout (tests compare generated files byte for byte).
+* text=auto eol=lf
+*.png binary
+*.ico binary
+*.jpg binary
+*.mp4 binary
