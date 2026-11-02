@@ -1,0 +1,11 @@
+Sarah —
+
+Short version: we can't hit the March date. The auth service still has that session bug from Q3 and nobody's touched it since Priya left. I'd rather tell you now than in February.
+
+What I think we do: ship the read-only replica first (that part's done, honestly it's been done for weeks), then move writes over in April once the auth thing is fixed. Two cutovers instead of one, yeah. But the second one is small.
+
+Can you let Marcus know? He's going to push back and I'd rather he hear it from you.
+
+Jordan
+
+PS the dashboards still say "migration: on track." Someone should fix that before Thursday.

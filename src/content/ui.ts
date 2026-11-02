@@ -1,0 +1,63 @@
+// Interface words shared by every page: header, settings dialog and footer.
+// Checked by tests/unit/site-copy.test.ts.
+import { site } from "@/config/site";
+
+export const ui = {
+  nav: {
+    how: "How it works",
+    price: "Price",
+    questions: "Q&A",
+    signIn: "Start a demo account",
+    app: "Write",
+    history: "History",
+    account: "Account",
+    home: `${site.name} home`,
+  },
+  settings: {
+    open: "Settings",
+    title: "Settings",
+    close: "Close settings",
+    sectionNav: "General",
+    sections: { general: "General", writing: "Writing", profile: "Profile", usage: "Usage" },
+    appearance: "Appearance",
+    theme: "Theme",
+    themeOptions: { system: "Match your device", light: "Light", dark: "Dark" },
+    motion: "Motion",
+    motionHint: "Reduce animation on this site.",
+    motionOptions: { system: "System", reduced: "Reduced" },
+    privacy: "Privacy",
+    counting: "Count my visits",
+    countingHint: "Anonymous page counts with no cookies.",
+    countingGpc: "Off, because your browser sends Global Privacy Control.",
+    countingOptions: { on: "On", off: "Off" },
+    saved: "Saved in this browser only.",
+    spelling: "Spelling",
+    spellingHint: "How every rewrite is spelt. Names and quotations are left alone.",
+    spellingOptions: { uk: "British", us: "American" },
+    samples: "Writing samples",
+    samplesHint: (count: number, words: number) =>
+      `${count} saved, ${words.toLocaleString("en-GB")} ${words === 1 ? "word" : "words"} in total. Add or edit them at any time.`,
+    samplesSignedOut: "Start a demo account to save samples of your writing.",
+    samplesButton: "Add or edit samples",
+    signIn: "Start a demo account",
+    profileIntro: "Your name is shown on your Account page. It's optional, and it is deleted with the demo account after 24 hours.",
+    firstName: "First name",
+    lastName: "Surname",
+    saveName: "Save name",
+    savingName: "Saving",
+    nameSaved: "Saved.",
+    nameTooLong: "Names can be up to 50 characters each.",
+    nameFailed: "That didn't save. Try again.",
+    usageIntro: "How much of your free rewrites you've used.",
+    usageIntroPaid: "How many credits you have left.",
+    loading: "Loading",
+    loadFailed: "This couldn't load. Close Settings and try again.",
+  },
+  footer: {
+    // Nothing is sold, so there is no postal address. The footer handles a null address by showing nothing.
+    by: `${site.name}, a working demo by ${site.owner.name}, ${site.owner.town}.`,
+    address: site.owner.postalAddress,
+    contact: site.owner.email,
+    legal: "Legal",
+  },
+};
