@@ -4,7 +4,7 @@ Polisher takes an AI draft and gives it back in your own voice. You paste 3 to 5
 
 It ran as a real £5-a-month product with live Stripe payments from 19 to 29 October 2026, as a 10-day validation test that was stopped a few hours early. It failed its own test, so I stopped selling and turned it into this portfolio demo. Nobody was charged. The full story is in `docs/CASE-STUDY.md`.
 
-A portfolio project led by Cameron Pittaway, who made the product, design and business decisions.
+A portfolio project by Cameron Pittaway. I made the product, design and business decisions.
 
 ## Live demo and code
 
