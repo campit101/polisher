@@ -1,5 +1,11 @@
 # Polisher
 
+**Problem:** Drafts from writing tools often sound generic, not like the person sending them.
+
+**What I built:** A tool that learns your voice from 3 to 5 writing samples and rewrites a draft in it, with a check that flags any number, link or quotation that changed.
+
+**Result:** It ran as a £5-a-month product for 10 days in October 2026 and got 143 front-page views (my own included), 2 free tries and no sign-ups or payments, so I stopped it and turned it into this demo. Read the [case study](docs/CASE-STUDY.md).
+
 Polisher takes an AI draft and gives it back in your own voice. You paste 3 to 5 samples of your own writing, then paste an AI draft (or rough notes). A rule-based clean-up step strips AI habits (long dashes, stock phrases, hidden characters) and enforces British or American spelling. A meaning check then flags any number, link or quotation that changed.
 
 It ran as a real £5-a-month product with live Stripe payments from 19 to 29 October 2026, as a 10-day validation test that was stopped a few hours early. It failed its own test, so I stopped selling and turned it into this portfolio demo. Nobody was charged. The full story is in `docs/CASE-STUDY.md`.
@@ -62,7 +68,7 @@ Polisher's own servers never save drafts or rewrites. They are sent to Anthropic
 
 ## Quality and measured results
 
-- Tests, measured 29 October 2026, all passing: 1,600 unit tests, 73 integration tests (run against a separate test database) and 200 Playwright end-to-end tests at phone and desktop sizes.
+- Tests, measured 29 October 2026, all passing: unit tests, integration tests (run against a separate test database) and Playwright end-to-end tests at phone and desktop sizes.
 - Lighthouse mobile on the landing page, median of 5 runs, measured 18 October 2026 (before the demo changes): 94 performance, 100 accessibility, 100 best practices, 100 SEO.
 - Blind comparison, 15 October 2026: I judged 20 pairs without knowing which was which, and picked Polisher's rewrite over a plain rewrite 14 times. This is one person's judgement, not a study.
 - Real-world result of the paid test: 143 front-page views (my own included), 2 free tries, 0 sign-ups from strangers and 0 payments.
